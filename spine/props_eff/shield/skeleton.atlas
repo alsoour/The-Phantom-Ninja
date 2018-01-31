@@ -1,0 +1,153 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+e_dun0000
+  rotate: false
+  xy: 2, 730
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0010
+  rotate: false
+  xy: 2, 730
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0001
+  rotate: false
+  xy: 2, 528
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0009
+  rotate: false
+  xy: 2, 528
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0002
+  rotate: false
+  xy: 204, 730
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0008
+  rotate: false
+  xy: 204, 730
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0003
+  rotate: false
+  xy: 2, 326
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0007
+  rotate: false
+  xy: 2, 326
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0004
+  rotate: false
+  xy: 204, 528
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0006
+  rotate: false
+  xy: 204, 528
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+e_dun0005
+  rotate: false
+  xy: 406, 730
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+hd0000
+  rotate: false
+  xy: 2, 164
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0001
+  rotate: false
+  xy: 204, 366
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0002
+  rotate: false
+  xy: 406, 568
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0003
+  rotate: false
+  xy: 608, 770
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0004
+  rotate: false
+  xy: 2, 2
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0005
+  rotate: false
+  xy: 770, 770
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0006
+  rotate: false
+  xy: 164, 164
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0007
+  rotate: false
+  xy: 164, 2
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0008
+  rotate: false
+  xy: 366, 366
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+hd0009
+  rotate: false
+  xy: 326, 204
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1

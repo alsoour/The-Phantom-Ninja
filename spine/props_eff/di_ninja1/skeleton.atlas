@@ -1,0 +1,160 @@
+
+skeleton.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cc0000
+  rotate: false
+  xy: 2, 344
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+cc0001
+  rotate: false
+  xy: 2, 192
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+cc0002
+  rotate: false
+  xy: 154, 344
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+cc0003
+  rotate: false
+  xy: 2, 40
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+cc0004
+  rotate: false
+  xy: 154, 192
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+cc0005
+  rotate: false
+  xy: 306, 344
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+cc0006
+  rotate: false
+  xy: 154, 40
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+cc0007
+  rotate: false
+  xy: 306, 192
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+cc0008
+  rotate: false
+  xy: 458, 344
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+dg/0
+  rotate: false
+  xy: 610, 210
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+dg/1
+  rotate: false
+  xy: 762, 362
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+dg/2
+  rotate: false
+  xy: 610, 76
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+dg/3
+  rotate: false
+  xy: 743, 210
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+dg/4
+  rotate: false
+  xy: 743, 76
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+dg/5
+  rotate: false
+  xy: 876, 228
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+r1
+  rotate: false
+  xy: 895, 372
+  size: 96, 122
+  orig: 96, 122
+  offset: 0, 0
+  index: -1
+r2
+  rotate: false
+  xy: 876, 148
+  size: 82, 78
+  orig: 82, 78
+  offset: 0, 0
+  index: -1
+ss0000
+  rotate: false
+  xy: 306, 40
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+ss0001
+  rotate: false
+  xy: 458, 192
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+ss0002
+  rotate: false
+  xy: 610, 344
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+ss0003
+  rotate: false
+  xy: 458, 40
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+yz
+  rotate: false
+  xy: 2, 2
+  size: 81, 36
+  orig: 81, 36
+  offset: 0, 0
+  index: -1
