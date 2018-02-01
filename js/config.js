@@ -4,11 +4,12 @@ require.config({
     // 配置外部js
     paths:{
       "zepto":"zepto",
-      "initData":"main/initData",
-      "initCanvas":"main/initCanvas",
-      "FN":"main/FN",
-      "LoadIMG":"main/LoadIMG",
-      "spine":"spine-canvas"
+      "spine":"spine-canvas",
+      "initData":"Init/initData",
+      "initCanvas":"Init/initCanvas",
+      "init":"Init/init",
+      "Load":"Load/LoadFile",
+      "custom":"custom"
     },
     waitSeconds: 0,
     shim:{
@@ -17,42 +18,28 @@ require.config({
         }
     }
 })
-require(["initData","initCanvas","LoadIMG","FN"],function(initData,$,load,FN){
-  load.LoadAll({
-    "image":["images/3.png",
-              "images/4.png",
-              "images/5.png",
-              "images/3885730_124701000519_2.jpg",
-              "images/22.png"
-            ],
-    "sound":"sound/bgm.mp3",
-    "spine":[
-              "spine/eye/skeleton.png",
-              "spine/player/assassin/top/skeleton.png",
-              "spine/player/bear/top/skeleton.png",
-              "spine/player/fox/top/skeleton.png",
-              "spine/player/ninja/top/skeleton.png",
-              "spine/player/white/top/skeleton.png"
-            ]
-  });
-  requestAnimationFrame(JudgeLoad);
-  function JudgeLoad(){
+require(["initData","initCanvas","Load","FN"],function(initData,$,load,FN){
+  let FilePath = [
+      "images/3.png",
+        "images/4.png",
+        "images/5.png",
+        "images/3885730_124701000519_2.jpg",
+        "images/22.png",
+        "sound/bgm.mp3",
+        "spine/eye/skeleton.atlas",
+        "spine/player/assassin/top/skeleton.atlas",
+        "spine/player/bear/top/skeleton.atlas",
+        "spine/player/fox/top/skeleton.atlas",
+        "spine/player/ninja/top/skeleton.atlas",
+        "spine/player/white/top/skeleton.atlas"
+  ];
+  load.LoadAll(FilePath);
+  requestAnimationFrame(JudgeLoadFinish);
+  function JudgeLoadFinish(){
     if(initData.isLoad){
       console.log(1)
     }else{
-      requestAnimationFrame(JudgeLoad)
+      requestAnimationFrame(JudgeLoadFinish)
     }
   }
-  // load.LoadALLSpine([
-  //   "spine/eye/skeleton.png",
-  //   "spine/player/assassin/top/skeleton.png",
-  //   "spine/player/bear/top/skeleton.png",
-  //   "spine/player/fox/top/skeleton.png",
-  //   "spine/player/ninja/top/skeleton.png",
-  //   "spine/player/white/top/skeleton.png"
-  // ]);
-  // setInterval(function(){
-  //     console.log(initData.nowLoadNum,initData.LoadNum,initData.isLoad)
-  // },60)
-
 });
