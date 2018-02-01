@@ -3,7 +3,7 @@ define(["zepto"],function($){
 		const context = canvas[0].getContext("2d");
 		let winW = window.innerWidth;
 		let winH = window.innerHeight;
-		let screenNum = Math.ceil();
+		let screenNum = null;
 		let LoadNum = 0;
 		let nowLoadNum = 0;
 		let isLoad = false;

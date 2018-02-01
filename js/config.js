@@ -34,7 +34,15 @@ require(["initData","initCanvas","LoadIMG","FN"],function(initData,$,load,FN){
               "spine/player/ninja/top/skeleton.png",
               "spine/player/white/top/skeleton.png"
             ]
-  })
+  });
+  requestAnimationFrame(JudgeLoad);
+  function JudgeLoad(){
+    if(initData.isLoad){
+      console.log(1)
+    }else{
+      requestAnimationFrame(JudgeLoad)
+    }
+  }
   // load.LoadALLSpine([
   //   "spine/eye/skeleton.png",
   //   "spine/player/assassin/top/skeleton.png",

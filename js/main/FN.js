@@ -16,7 +16,9 @@ define(["zepto","initData"],function($,initData){
 		    fn?fn():null;
 		    initData.IMGArr.push({
 		    	"name":name,
-		    	"imgObj":image
+		    	"Obj":image,
+		    	"width":image.width,
+		    	"height":image.height
 		    })
 		  }
 		},
@@ -28,7 +30,7 @@ define(["zepto","initData"],function($,initData){
 				fn?fn():null;
 				initData.SoundArr.push({
 			    	"name":name,
-			    	"soundObj":sound
+			    	"Obj":sound
 			    })
 			}
 		},
@@ -44,7 +46,7 @@ define(["zepto","initData"],function($,initData){
 						initData.SpineArr.push({
 					    	"name":name,
 					    	"address":address,
-					    	"spineObj":assetManager
+					    	"Obj":assetManager
 					    })
 					});
 				});
