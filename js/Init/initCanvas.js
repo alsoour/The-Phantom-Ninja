@@ -1,5 +1,5 @@
-define(["zepto","initData","FN"],function($,initData,FN){
-		initData.canvas.width = window.innerWidth;
-		initData.canvas.height = window.innerHeight;
+define(["zepto","initData"],function($,initData){
+		initData.canvas.width = initData.winW;
+		initData.canvas.height = initData.winH;
 		// FN.a();
 })

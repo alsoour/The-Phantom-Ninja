@@ -1,4 +1,4 @@
-define(["zepto","FN","initData","spine","custom"],function($,FN,initData,spine,custom){
+define(["zepto","initData","spine","custom"],function($,initData,spine,custom){
 	let FileType = {//文件配置列表
 		"IMG":["jpg","png","gif"],
 		"Sound":["mp3","wav"],
@@ -11,12 +11,9 @@ define(["zepto","FN","initData","spine","custom"],function($,FN,initData,spine,c
 		  let name=url.replace(/.*\/([^\/]+)\..+/,'$1');
 		  image.onload=function(){
 		    fn?fn():null;
-		    initData.IMGArr.push({
-		    	"name":name,
-		    	"Obj":image,
-		    	"width":image.width,
-		    	"height":image.height
-		    })
+		    initData.IMGArr[name]={
+		    	"Obj":image
+		    }
 		  }
 	}
 	function loadSound(url,fn){//音频加载
@@ -25,26 +22,25 @@ define(["zepto","FN","initData","spine","custom"],function($,FN,initData,spine,c
 			let name = url.replace(/.*\/([^\/]+)\..+/,'$1');
 			sound.onloadedmetadata = function(){
 				fn?fn():null;
-				initData.SoundArr.push({
-			    	"name":name,
+				initData.SoundArr[name]={
 			    	"Obj":sound
-			    })
+			    }
 			}
 	}
 	function loadSpine(url,fn){//spine加载
-			assetManager = new spine.canvas.AssetManager();
-			name = url.replace(/.*\/([^\/]+)\..+/,'$1');
-			address = url.replace(/(.*\/)[^\/]+\..+/,'$1');
-			// console.log(address)
+			let assetManager = new spine.canvas.AssetManager();
+			let name = url.replace(/.*\/([^\/]+)\..+/,'$1');
+			let address = url.replace(/(.*\/)[^\/]+\..+/,'$1');
+			let index = url.replace(/(.*\/)[^\/]+\..+/,'$1').replace(/\//g,'_').replace(/\_$/,"");
 			assetManager.loadText(address + name + ".json",function(){
 				assetManager.loadText(address + name + ".atlas",function(){
 					assetManager.loadTexture(address + name + ".png",function(){
 						fn?fn():null;
-						initData.SpineArr.push({
-					    	"name":name,
+						initData.SpineArr[index]={
+							"name":name,
 					    	"address":address,
 					    	"Obj":assetManager
-					    })
+					    }
 					});
 				});
 			});
