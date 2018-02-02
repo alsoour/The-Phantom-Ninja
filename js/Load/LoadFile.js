@@ -34,14 +34,29 @@ define(["zepto","initData","spine","custom"],function($,initData,spine,custom){
 			let index = url.replace(/(.*\/)[^\/]+\..+/,'$1').replace(/\//g,'_').replace(/\_$/,"");
 			assetManager.loadText(address + name + ".json",function(){
 				assetManager.loadText(address + name + ".atlas",function(){
-					assetManager.loadTexture(address + name + ".png",function(){
+					// console.log(initData.filePathSpineImg)
+					// console.log(initData.filePathSpineImg[index])
+					let spinePngNum=initData.filePathSpineImg[index].length;
+					let spineLoadPngNum = 0;
+					loadSpinePng();
+					function loadSpinePng(){
+						assetManager.loadTexture(initData.filePathSpineImg[index][spineLoadPngNum],function(){		
+							spineLoadPngNum++;
+							if(spinePngNum == spineLoadPngNum){
+								loadSpineData();
+							}else{
+								loadSpinePng();
+							}
+						});
+					}
+					function loadSpineData(){
 						fn?fn():null;
 						initData.SpineArr[index]={
 							"name":name,
 					    	"address":address,
 					    	"Obj":assetManager
 					    }
-					});
+					}
 				});
 			});
 	}

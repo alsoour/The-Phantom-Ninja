@@ -16,6 +16,7 @@ define(["zepto","spine"],function($,spine){
 		let IMGArr = {};
 		let SoundArr = {};
 		let SpineArr = {};
+		let filePathSpineImg = null;
 		return {
 					"canvas":canvas[0],
 					"context":context,
@@ -29,7 +30,8 @@ define(["zepto","spine"],function($,spine){
 					"isLoad":isLoad,
 					"skeletonRenderer":skeletonRenderer,
 					"lastFrameTime":lastFrameTime,
-					"delta":delta
+					"delta":delta,
+					"filePathSpineImg":filePathSpineImg
 				}; 
 })
 		
