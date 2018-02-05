@@ -35,39 +35,24 @@ define(["zepto","initData"],function($,initData){
 			}
 			
 			function calculateBounds(skeleton) {
-				var data = skeleton.data;
+				let data = skeleton.data;
 				skeleton.setToSetupPose();
 				skeleton.updateWorldTransform();
-				var offset = new spine.Vector2();
-				var size = new spine.Vector2();
+				let offset = new spine.Vector2();
+				let size = new spine.Vector2();
 				skeleton.getBounds(offset, size, []);
 				return { offset: offset, size: size };
-			}
-			
-		},
-		drawSpineAssassinRun:function(obj,animate){
-			var centerX = obj.bounds.offset.x;
-			var centerY = obj.bounds.offset.y;
-			var width = canvas.width;
-			var height = canvas.height;
-
-			initData.context.setTransform(1, 0, 0, 1, 0, 0);
-			initData.context.translate(-centerX, -centerY);
-			obj.state[animate].update(initData.delta);
-			// console.log(obj.state,animate)
-			obj.state[animate].apply(obj.skeleton);
-			obj.skeleton.updateWorldTransform();
-			initData.skeletonRenderer.draw(obj.skeleton);
-		},
-		drawBg:function(){
-			draw.drawCanvas(initData.IMGArr["background"].Obj,0,0,initData.winW,initData.winH);
+			}			
 		},
 		clearCanvas:function(){
 			initData.context.clearRect(0, 0, canvas.width, canvas.height);
-			initData.context.save();
-			initData.context.setTransform(1, 0, 0, 1, 0, 0);
-			initData.context.clearRect(0, 0, canvas.width, canvas.height);
-			initData.context.restore();
+			// initData.context.save();
+			// initData.context.setTransform(1, 0, 0, 1, 0, 0);
+			// initData.context.clearRect(0, 0, canvas.width, canvas.height);
+			// initData.context.restore();
+		},
+		renderSound:function(obj){
+			obj.Obj.play();
 		}
 	}
 })

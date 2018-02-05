@@ -5,9 +5,29 @@
 	<meta name="viewport" content="width=device-width,user-scalable=no">
 	<title>幻象忍者</title>
 	<link rel="stylesheet" href="css/init.css">
+	<style>
+		.left{
+			width:50px;
+			height:50px;
+			position:absolute;
+			left:50px;
+			bottom:100px;
+			background:#000;
+		}
+		.right{
+			width:50px;
+			height:50px;
+			position:absolute;
+			right:50px;
+			bottom:100px;
+			background:#000;
+		}
+	</style>
 </head>
 <body>
 	<canvas id="canvas">您的浏览器不支持canvas，请更换高版本浏览器（如：chrome，firefox当前最高版本）</canvas>
+	<div class="left"></div>
+	<div class="right"></div>
 </body>
 <script data-main="js/config" src="js/require-mini.js" ></script>
 </html>

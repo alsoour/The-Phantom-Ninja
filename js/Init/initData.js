@@ -10,6 +10,10 @@ define(["zepto","spine"],function($,spine){
 		let winW = window.innerWidth;
 		let winH = window.innerHeight;
 		let screenNum = null;
+		let screenRoadCenter = [];
+		for(let i=0;i<4;i++){
+			screenRoadCenter.push(winW*0.5/4*i+winW*0.5/4/2+winW*0.5/2);
+		}
 		let LoadNum = 0;
 		let nowLoadNum = 0;
 		let isLoad = false;
@@ -17,6 +21,7 @@ define(["zepto","spine"],function($,spine){
 		let SoundArr = {};
 		let SpineArr = {};
 		let filePathSpineImg = null;
+		let speed = 10;
 		return {
 					"canvas":canvas[0],
 					"context":context,
@@ -31,7 +36,9 @@ define(["zepto","spine"],function($,spine){
 					"skeletonRenderer":skeletonRenderer,
 					"lastFrameTime":lastFrameTime,
 					"delta":delta,
-					"filePathSpineImg":filePathSpineImg
+					"filePathSpineImg":filePathSpineImg,
+					"speed":speed,
+					"screenRoadCenter":screenRoadCenter
 				}; 
 })
 		

@@ -45,7 +45,7 @@ for(let i=0;i<fileImg.length;i++){
     filePathImg.push(thisFilePath.replace(/^.\//,''));
 }
 for(let i=0;i<fileSound.length;i++){
-    let thisFilePath = fileImg[i].path + fileImg[i].filename;
+    let thisFilePath = fileSound[i].path + fileSound[i].filename;
     filePath.push(thisFilePath.replace(/^.\//,''));
     filePathSound.push(thisFilePath.replace(/^.\//,''));
 }
@@ -66,6 +66,7 @@ for(let i=0;i<fileSpine.length;i++){
         filePathSpineImg[name].push(fileSpine[i].path.replace(/^.\//,'').replace(/(.*\/)[^\/]+\..+/,'$1')+fileSpine[i].filename)
     }   
 }
+console.log(filePathSound)
 let data = {
     "filePath":filePath,
     "filePathSpineImg":filePathSpineImg
@@ -79,7 +80,7 @@ let data = {
 //     str+=JSON.stringify(fileImg[i])+",";
 // }
 // str = str + "]";
-console.log(data);
+// console.log(data);
 var fs = require('fs');
 fs.writeFileSync('json/' + "filePath.json", JSON.stringify(data));
 // fs.writeFile('json/' + "filePath.json", data , function(err) {
